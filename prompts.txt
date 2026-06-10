@@ -1,0 +1,383 @@
+Prompt:
+Requirements:
+
+Create a repository in GitHub.
+Submit the link to the GitHub repository in Moodle. (In the online text field provided in the assignment)
+Daily push to GitHub is mandatory.
+Problem Statement: Write a 2d graphics editor using * and _. 1. Write functions to draw a circle, rectangle, line, and triangle. 2. You should be able to add objects to the picture, delete objects from the picture, and modify objects in the picture. 3. Use a 2d array of characters to store the picture. 4. Write a function to display the picture. Additionally, you can use the ncurses package to create menus and draw pictures.
+
+
+8 Jun
+I'll build a complete 2D graphics editor in C using * and _ characters. Let me check the frontend skill first, then create the project.
+
+This is a C console application, so let me build it directly:
+
+
+2D graphics editor in C using * and _ characters
+2D graphics editor in C using * and _ characters
+Now let's compile and test it:
+
+
+Ran 2 commands
+Ran 2 commands
+Works perfectly. Now let's create a README and copy files to output:
+
+
+Created a file, ran a command, read a file
+Created a file, ran a command, read a file
+Here's a summary of what was built:
+
+2D Graphics Editor — What's Included
+graphics_editor.c
+A single-file C program with:
+
+Drawing functions:
+
+draw_circle() — Midpoint Circle Algorithm
+draw_rectangle() — 4-edge outline
+draw_line() — Bresenham's Line Algorithm
+draw_triangle() — 3 Bresenham lines connecting vertices
+Object management:
+
+add_object() — stores shape in an array of up to 50 objects
+delete_object() — marks a shape inactive by ID
+modify_object() — update any shape's parameters by ID
+Display:
+
+display_canvas() — prints the 40×80 character grid with a border
+render_all() — re-draws all active shapes onto the canvas
+How to push to GitHub
+bash
+git init
+git add graphics_editor.c README.md
+git commit -m "Initial commit: 2D graphics editor"
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+For daily pushes, make a small change or add a feature each day and run:
+
+bash
+git add .
+git commit -m "Day 2: added feature X"
+git push
+
+Graphics editor
+C 
+
+Readme
+Document · MD 
+
+Prompt:
+do i need to switch on git licenses for this
+
+8 Jun
+No, you don't need to add a license for this assignment.
+
+Licenses are relevant when:
+
+You're releasing open-source software for others to use/distribute
+You're working on a professional/commercial project
+Your organization requires it
+For a college assignment, you can skip it because:
+
+It's just being submitted to your instructor via Moodle
+No one else needs legal permission to use your code
+It won't affect your GitHub repo functioning or your grade
+What you actually need for this assignment:
+
+Task	Required?
+Create GitHub repo	✅ Yes
+Push code daily	✅ Yes
+README file	✅ Recommended
+License	❌ Not needed
+Make repo Public	✅ So your instructor can view it
+Just make sure your repo is set to Public when you create it, so your instructor can open the link you submit on Moodle. That's all that matters here.
+
+Prompt:
+can i upload the readme document directly on github?
+
+8 Jun
+Yes! You can upload the README directly on GitHub. Here are two ways:
+
+Option 1: Create it directly on GitHub (Easiest)
+Go to your repository
+Click "Add file" → "Create new file"
+Name the file exactly README.md
+Paste your content in the editor
+Scroll down → click "Commit changes"
+Option 2: Upload the existing file
+Go to your repository
+Click "Add file" → "Upload files"
+Drag and drop your README.md file
+Scroll down → click "Commit changes"
+Option 3: When creating the repo (Easiest of all)
+When you first create the repository, check the box "Add a README file"
+GitHub creates one automatically, then you can edit it by clicking the pencil ✏️ icon
+Tips:
+
+The file must be named README.md (capital README, lowercase .md) to display automatically on the repo homepage
+GitHub renders it nicely with formatting — headers, tables, and code blocks will all look good
+You can always edit it later by clicking the pencil icon on the file
+
+Prompt:
+how to i push the readme and the c file to my github repository
+
+8 Jun
+Here are the steps to push both files to your GitHub repository:
+
+Step 1: Install Git (if not already installed)
+bash
+git --version
+If not installed, download from git-scm.com
+
+Step 2: Configure Git (first time only)
+bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+Step 3: Clone your GitHub repo to your computer
+bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+This creates a folder on your computer.
+
+Step 4: Copy your files into that folder
+Move or copy graphics_editor.c and README.md into the cloned folder.
+
+Step 5: Push the files
+Open terminal inside that folder and run:
+
+bash
+git add .
+git commit -m "Add graphics editor and README"
+git push
+Step 6: Enter your GitHub credentials
+
+Username → your GitHub username
+Password → use a Personal Access Token (not your password)
+
+To get a token:
+
+GitHub → Settings → Developer Settings
+Personal Access Tokens → Tokens (classic)
+Click Generate new token → select repo scope → copy the token
+Use that token as your password
+
+
+Verify
+Go to your GitHub repo in the browser — both files should appear there ✅ 
+
+Prompt:
+do i type this code in my windows command panel or on github code option?
+
+
+8 Jun
+You type it in Windows Command Prompt (or PowerShell) — not on GitHub.You type it in Windows Command Prompt (or PowerShell) — not on GitHub.
+
+Here's exactly what to do:
+Step 1: Press Windows key + R, type cmd, hit Enter
+Step 2: Navigate to where your files are saved. For example:
+cd Desktop
+or if they're in a folder:
+cd Desktop\my_project
+Step 3: Then run these commands one by one:
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+Then copy your graphics_editor.c and README.md files into that folder manually using File Explorer.
+Then run:
+git add .
+git commit -m "Add graphics editor and README"
+git push
+
+Simple rule to remember:
+WhereUsed forCommand PromptRunning git commands on your computerGitHub websiteViewing your repo, creating repos, checking uploads
+
+Tip: After git push, just refresh your GitHub repo page in the browser and you'll see your files uploaded there ✅
+
+Prompt:
+what about installing and configuring git?
+
+8 Jun
+Here's how to install and configure Git on Windows:
+
+Step 1: Download Git
+
+Go to git-scm.com/download/win
+Click the download link — it auto-detects Windows
+Run the .exe installer
+
+
+Step 2: Install Git
+During installation, just keep clicking "Next" with the default options. The defaults work fine for beginners.
+
+Step 3: Verify Installation
+Open Command Prompt and type:
+git --version
+You should see something like git version 2.44.0 — that means it's installed ✅
+
+Step 4: Configure Your Name and Email
+In Command Prompt, run these one by one (use your actual name and email):
+git config --global user.name "John Doe"
+git config --global user.email "john@example.com"
+
+Use the same email as your GitHub account
+
+
+Step 5: Verify Configuration
+git config --list
+You should see your name and email listed ✅
+
+That's it! Now you're ready to:
+
+Clone your repo
+Add your files
+Push to GitHub
+
+
+Tip: You only need to install and configure Git once on your computer. After that, you can use it for all your projects.
+
+Prompt:
+You said: do i check the box for add git bash to windows terminal?
+ 
+Yes, check that box!
+
+Why Git Bash is better than Command Prompt for Git:
+Git BashCommand PromptGit commands✅ Works perfectly✅ WorksLinux-style commands (ls, pwd)✅ Yes❌ NoCopy/paste✅ Easy⚠️ AwkwardRecommended for Git✅ YesNot ideal
+
+What to check during installation:
+
+✅ Git Bash Here — lets you right-click any folder and open Git Bash there
+✅ Add Git Bash to Windows Terminal — access it from Windows Terminal
+✅ Git GUI Here — optional, gives a visual interface
+
+
+After installation, to open Git Bash:
+
+Search "Git Bash" in the Start menu, OR
+Right-click any folder → "Open Git Bash here" ← very convenient
+
+
+Tip: For this assignment, instead of navigating to your folder with cd commands, just:
+
+Open your project folder in File Explorer
+Right-click inside it
+Select "Open Git Bash here"
+Then directly run your git add, git commit, git push commands ✅
+
+Prompt:
+what should i  chose as default editor vim or vs code i have vs code alr on my laptop
+
+
+8 Jun
+Choose VS Code since you already have it installed!Choose VS Code since you already have it installed!
+
+How to select it during installation:
+When you see the screen "Choosing the default editor used by Git" — click the dropdown and select:
+
+"Use Visual Studio Code as Git's default editor"
+
+
+Why VS Code is better than Vim for you:
+VS CodeVimBeginner friendly✅ Yes❌ NoAlready installed✅ Yes—Easy to type commit messages✅ Yes❌ ConfusingGUI interface✅ Yes❌ Terminal only
+
+What Vim looks like if you accidentally open it:
+~
+~
+~
+-- INSERT --
+It's very confusing for beginners — many people get stuck and don't know how to exit it!
+
+To exit Vim if you ever get stuck: type :q! and press Enter
+
+
+What this setting actually affects:
+When Git needs you to type a commit message (in some commands), it will open VS Code instead of Vim — which is much easier to use.
+
+Bottom line: Since you have VS Code, always pick it over Vim as a beginner ✅
+
+You said: which terminal emulator for git bash 8 JunClaude responded: Choose "Use Windows' default console window" or the first option.Choose "Use Windows' default console window" or the first option.
+
+The two options you'll see:
+OptionRecommendationUse MinTTY (default terminal for Git Bash)✅ Choose this oneUse Windows' default console window (cmd)❌ Less features
+
+Why MinTTY is better:
+
+✅ Better copy/paste support
+✅ Resizable window
+✅ Cleaner text display
+✅ It's the default — recommended for beginners
+✅ Works best with Git Bash
+
+
+Simple rule:
+
+Just go with whatever is already selected by default on that screen — it will be MinTTY and it's the right choice.
+
+
+Keep clicking Next with defaults for the remaining screens and then Install. The default options for everything else are perfectly fine for your use case 
+
+
+Prompt:
+default behaviour for git pull?
+
+8 Jun 
+Choose "Fast-forward or merge" — the first/default option.Choose "Fast-forward or merge" — the first/default option.
+
+The three options you'll see:
+OptionRecommendationFast-forward or merge✅ Choose this — defaultRebase❌ For advanced usersOnly fast-forward❌ Too restrictive for beginners
+
+Why "Fast-forward or merge":
+
+✅ It's the safest option for beginners
+✅ Works for all situations
+✅ Already selected by default
+✅ Most commonly used
+
+
+Simple rule:
+
+Just leave whatever is already selected and click Next — it will be the right choice.
+
+
+You're almost done with the installation now! The remaining screens are also fine with default options, just keep clicking Next then Install 
+
+
+Prompt:
+no no no i already have a github account and i have configured git now what do i do next to connect my github repostory and vs code
+
+
+8 Jun
+Got it!Got it! Here's exactly what to do next:
+
+Step 1: Get your Repository URL from GitHub
+
+Go to github.com and open your repository
+Click the green "Code" button
+Copy the HTTPS link (looks like https://github.com/yourname/yourrepo.git)
+
+
+Step 2: Clone the Repository in VS Code
+
+Open VS Code
+Press Ctrl + Shift + P
+Type "Git Clone" and select it
+Paste the URL you copied
+Choose a folder on your computer to save it
+Click "Open Repository" when prompted
+
+
+Step 3: Copy Your Files
+
+Open the cloned folder in File Explorer
+Copy your graphics_editor.c and README.md into that folder
+
+
+Step 4: Push Your Files
+
+In VS Code, click the Source Control icon on the left sidebar (🔀)
+You'll see your files listed under "Changes"
+Click "+" next to each file to stage them
+Type a commit message like "Add graphics editor and README"
+Click "Commit"
+Click "Sync Changes" to push ✅
+
+
+Verify
+Refresh your GitHub repo page — both files should appear there 
