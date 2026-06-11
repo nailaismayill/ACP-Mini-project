@@ -1,0 +1,56 @@
+Problem Statement: Write a 2d graphics editor using * and  _.
+
+Write functions to draw a circle, rectangle, line, and triangle.
+You should be able to
+      add objects to the picture,
+      delete objects from the picture, and
+       modify objects in the picture.
+Use a 2d array of characters to store the picture.
+Write a function to display the picture.
+
+Additionally, you can use the ncurses package to create menus and draw pictures.
+
+
+I have created the implementation plan for the 2D graphics editor. Please review the plan in 
+implementation_plan.md
+.
+
+If you would like to discuss design choices, you can use the /grill-me slash command. Otherwise, please provide your approval so that I can proceed with implementing it.
+
+Auto-proceeded with
+Implementation Plan
+I will set a 10-second timer to wait for the compiler search task to complete.
+
+I will wait for the search to complete.
+
+Schedule check: Timer has expired
+I have completed the implementation of the 2D graphics editor. Here is a summary of the work done:
+
+What was accomplished:
+Designed and wrote the complete C implementation directly in your active document 
+
+Naila_Ismayil_R25EI031.c
+.
+Implemented core rendering algorithms, including Bresenham's Line Algorithm and the Midpoint Circle Algorithm for drawing shapes on the character grid.
+Created functions for 
+
+init_canvas
+ to clear the grid, 
+
+set_pixel
+ for bounds-safe drawing, and drawing functions for each shape.
+Built a command-line interface with interactive options to add, modify, and delete shapes, featuring color-coded outputs using ANSI escape sequences.
+Documented progress in 
+task.md
+ and provided a detailed guide in 
+walkthrough.md
+.
+For step-by-step documentation, diagrams, and compilation instructions, please refer to the 
+walkthrough.md
+ artifact.
+
+Implementation Plan
+Walkthrough
+9:55 AM
+
+
